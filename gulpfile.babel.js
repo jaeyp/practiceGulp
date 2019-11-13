@@ -6,8 +6,12 @@ import ws from "gulp-webserver"; // streaming gulp plugin to run a local webserv
 
 const routes = {
   pug: {
-    src: "src/*.pug", // route 1depth pug files
-    //src: "src/**/*.pug", // route all pug files including sub directories
+    // We should watch all pug files with '**' to support live reloading
+    watch: "src/**/*.pug",
+    // Here, we only need to route only 1-depth pug files 'cause index.pug extends layout.pug, which contains all sub pug files.
+    src: "src/*.pug",
+    // This is a way to route all pug files including sub directories, but we don't need to convert each pug files into html here.
+    //src: "src/**/*.pug",
     dest: "build"
   }
 };
@@ -26,6 +30,10 @@ const clean = () => del(["build"]);
 const webserver = () =>
   gulp.src("build").pipe(ws({ livereload: true, open: true }));
 
+const watch = () => {
+  gulp.watch(routes.pug.watch, pug_stream);
+};
+
 /* 
     Series Methods
  */
@@ -33,6 +41,6 @@ const prepare = gulp.series([clean]);
 
 const jobs = gulp.series([pug_stream]);
 
-const postjob = gulp.series([webserver]);
+const postjob = gulp.parallel([webserver, watch]);
 
 export const dev = (() => gulp.series([prepare, jobs, postjob]))();
