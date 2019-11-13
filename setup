@@ -44,6 +44,9 @@
 11 install gulp-webserver
 ~$ npm i gulp-webserver -D
 
+12. install gulp-image
+~$ npm i gulp-image -D
+
 9. define 'dev' & 'build' tasks
 ...
 
