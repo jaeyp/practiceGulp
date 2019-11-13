@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/jaeyp/practiceGulp#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-webserver": "^0.9.1"
   }
 }

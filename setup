@@ -19,18 +19,40 @@
 ~$ npm i gulp -D
 ~$ npm -p touch nodetouch gulpfile.json
 
-7. edit package.json
+7. install Babel packages
+~$ npm i @babel/register @babel/core -D
+7-1 install preset-env in order to enable transforms for ES2015+
+~$ npm i @babel/preset-env -D
+7-2. edit .babelrc
+  {
+    "presets": ["@babel/preset-env"]
+  }
+
+8. edit package.json
   "scripts": {
     ...
     "dev": "gulp dev",
     "build": "gulp build"
   },
 
-8. run scripts on purpose
+9. install gulp-pug
+~$ npm i gulp-pug -D
+
+10. install del
+~$ npm i del -D
+
+11 install gulp-webserver
+~$ npm i gulp-webserver -D
+
+9. define 'dev' & 'build' tasks
+...
+
+10. run 'dev' task
 ~$ npm run dev
 or
-~$ npm run build
+~$ gulp dev
 
+--------------------------------------------
 cf. vscode workspace setting (local setting)
 Command Palette(Ctrl+Shift+P or f1) > Open User Settings > Workbench > Appearance > Check "Edit in settings.json"
 
