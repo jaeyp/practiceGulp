@@ -1,0 +1,38 @@
+1. initialize git
+~$ git init
+
+2. scaffolding - creating directories & empty files
+
+3. creating a new repository on github
+
+4. adding the repository on project
+~$ git remote add origin https://github.com/jaeyp/practiceGulp
+~$ git pull origin master --allow-unrelated-histories
+~$ git push origin master
+
+5. initialize npm project
+~$ npm init
+5-1 remove "main" fields from package.json since this is not a module but a standalone program.
+
+6. install Gulp
+~$ npm i gulp-cli -g
+~$ npm i gulp -D
+~$ npm -p touch nodetouch gulpfile.json
+
+7. edit package.json
+  "scripts": {
+    ...
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+
+8. run scripts on purpose
+~$ npm run dev
+or
+~$ npm run build
+
+cf. vscode workspace setting (local setting)
+Command Palette(Ctrl+Shift+P or f1) > Open User Settings > Workbench > Appearance > Check "Edit in settings.json"
+
+cf. vscode user setting (global setting)
+Command Palette(Ctrl+Shift+P or f1) > Open Settings (JSON)

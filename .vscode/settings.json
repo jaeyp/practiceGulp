@@ -1,0 +1,20 @@
+{
+  // auto formatting on save
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  // emojisense
+  "emojisense.unicodeCompletionsEnabled": true,
+  "emojisense.markupCompletionsEnabled": false,
+  // Controls which languages emojisense is active in.
+  "emojisense.languages": {
+    "markdown": true,
+    "git-commit": true,
+    "plaintext": true,
+    "json": true,
+    "jade": true,
+    "python": true,
+    "javascript": true,
+    "javascriptreact": true,
+    "html": true
+  }
+}

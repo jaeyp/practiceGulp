@@ -1,0 +1,23 @@
+{
+  "name": "practicegulp",
+  "version": "1.0.0",
+  "description": "Learn Gulp by building an development environment",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaeyp/practiceGulp.git"
+  },
+  "author": "jaey park <jp.inseoul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaeyp/practiceGulp/issues"
+  },
+  "homepage": "https://github.com/jaeyp/practiceGulp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
