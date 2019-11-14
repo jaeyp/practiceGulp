@@ -3,12 +3,10 @@ title: 'Practice Gulp'
 disqus: hackmd
 ---
 
-Practice Gulp <span style="color:#2B6CB0;font-size:22px">**mini static site generator**</span>  
+Practice Gulp
 ===
-![downloads](https://img.shields.io/github/downloads/atom/atom/total.svg)
-![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
-![chat](https://img.shields.io/discord/:serverId.svg)
-  
+<span style="color:#2B6CB0;font-size:20px;font-weight:700">mini static site generator</span>
+
 * This is a tutorial project representing ***how to bundle web application within less than a hundred lines of codes over Gulp + Browserify***.
 
 * **What does this project include?**  
