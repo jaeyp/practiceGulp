@@ -7,6 +7,7 @@ import ws from "gulp-webserver"; // streaming gulp plugin to run a local webserv
 import image from "gulp-image"; // Optimize PNG, JPEG, GIF, SVG images with gulp task.
 import sass from "gulp-sass";
 import autoprefixer from "gulp-autoprefixer"; // add backward compatibility with css for old browser
+import csso from "gulp-csso"; // minify CSS
 
 sass.compiler = require("node-sass");
 
@@ -55,6 +56,7 @@ const taskStyle = () =>
     .src(routes.scss.src)
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
+    .pipe(csso())
     .pipe(gulp.dest(routes.scss.dest));
 
 const clean = () => del(["build"]);

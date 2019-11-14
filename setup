@@ -57,6 +57,9 @@
     "last 2 version"
   ]
 
+15. install gulp-csso to minify CSS
+~$ npm i gulp-csso -D
+
 9. define 'dev' & 'build' tasks
 ...
 
