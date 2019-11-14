@@ -11,7 +11,7 @@ Practice Gulp
 
 **React with CRA + Others with Gulp + No Webpack = Peace of Mind**
 
-##### Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify | Browserify | Babelify | Uglifyify | Deploy | and More | Output
+##### Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify | Browserify | Babelify | Uglifyify | Deploy | Output
 
 [demo site](https://jaeyp.github.io/practiceGulp/)
 
