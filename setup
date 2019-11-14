@@ -21,11 +21,20 @@
 
 7. install Babel packages
 ~$ npm i @babel/register @babel/core -D
-7-1 install preset-env in order to enable transforms for ES2015+
+7-1 install preset-env in order to use preset instead of adding lots of babel plugins in .babelrc
 ~$ npm i @babel/preset-env -D
 7-2. edit .babelrc
-  {
+  { 
+    // we can define "presets:" instead of "plugins:"
+    // presets is like a bundle package (collection of plugins)
+    // official plugins:
+    //    @babel/preset-env
+    //    @babel/preset-flow
+    //    @babel/preset-react
+    //    @babel/preset-typescript
+
     "presets": ["@babel/preset-env"]
+    // with this setting, all the plugins to enable transforms for ES2015+ are installed at once.
   }
 
 8. edit package.json
@@ -59,6 +68,17 @@
 
 15. install gulp-csso to minify CSS
 ~$ npm i gulp-csso -D
+
+16. install browserify plugin "gulp-bro" in order to allows developers to write Node.js-style modules that compile for use in the browser
+# What is browserify?
+# Simply, it allows us to use require() in the browser!
+~$ npm i gulp-bro -D
+
+17. install babelify plugin
+~$ npm i babelify -D
+
+18. installl uglifyify plugin
+~$ npm i uglifyify -D
 
 9. define 'dev' & 'build' tasks
 ...

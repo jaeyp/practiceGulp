@@ -8,6 +8,8 @@ import image from "gulp-image"; // Optimize PNG, JPEG, GIF, SVG images with gulp
 import sass from "gulp-sass";
 import autoprefixer from "gulp-autoprefixer"; // add backward compatibility with css for old browser
 import csso from "gulp-csso"; // minify CSS
+import bro from "gulp-bro"; // browserify
+import babelify from "babelify";
 
 sass.compiler = require("node-sass");
 
@@ -33,6 +35,11 @@ const routes = {
     watch: "src/scss/**/*.scss",
     src: "src/scss/style.scss",
     dest: "build/css"
+  },
+  js: {
+    watch: "src/js/**/*.js",
+    src: "src/js/main.js",
+    dest: "build/js"
   }
 };
 
@@ -59,6 +66,21 @@ const taskStyle = () =>
     .pipe(csso())
     .pipe(gulp.dest(routes.scss.dest));
 
+const taskJs = () =>
+  gulp
+    .src(routes.js.src)
+    .pipe(
+      // https://www.npmjs.com/package/gulp-bro
+      bro({
+        transform: [
+          // https://www.npmjs.com/package/babelify
+          babelify.configure({ presets: ["@babel/preset-env"] }),
+          ["uglifyify", { global: true }]
+        ]
+      })
+    )
+    .pipe(gulp.dest(routes.js.dest));
+
 const clean = () => del(["build"]);
 
 // ref. https://www.npmjs.com/package/gulp-webserver
@@ -71,6 +93,7 @@ const watch = () => {
   // if image size is big, just running task manually wolud be much better!
   gulp.watch(routes.img.watch, taskImg);
   gulp.watch(routes.scss.watch, taskStyle);
+  gulp.watch(routes.js.watch, taskJs);
 };
 
 /**
@@ -80,8 +103,8 @@ const watch = () => {
 // therefore, we run img task in preparation stage so that we can be sure that all images get ready for other tasks!
 const prepare = gulp.series([clean, taskImg]);
 
-const jobs = gulp.series([taskPug]);
+const jobs = gulp.series([taskPug, taskStyle, taskJs]);
 
-const postJob = gulp.parallel([webserver, watch, taskStyle]);
+const postJob = gulp.parallel([webserver, watch]);
 
 export const dev = (() => gulp.series([prepare, jobs, postJob]))();
