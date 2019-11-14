@@ -17,7 +17,7 @@
 6. install Gulp
 ~$ npm i gulp-cli -g
 ~$ npm i gulp -D
-~$ npm -p touch nodetouch gulpfile.json
+~$ npm -p touch nodetouch gulpfile.js
 
 7. install Babel packages
 ~$ npm i @babel/register @babel/core -D
