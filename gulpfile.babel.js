@@ -1,9 +1,14 @@
-//const gulp = require("gulp");
-import gulp from "gulp"; // we can export gulp module in JavaScript ES6's way by using babel
+// const gulp = require("gulp");
+// we can export gulp module in JavaScript ES6's way by using babel. check .babelrc
+import gulp from "gulp";
 import pug from "gulp-pug"; // compile pug templates into HTML or JS
 import del from "del"; // delete files and directories using globs (globby - glob pattern matching plugin)
 import ws from "gulp-webserver"; // streaming gulp plugin to run a local webserver with LiveReload
 import image from "gulp-image"; // Optimize PNG, JPEG, GIF, SVG images with gulp task.
+import sass from "gulp-sass";
+import autoprefixer from "gulp-autoprefixer"; // add backward compatibility with css for old browser
+
+sass.compiler = require("node-sass");
 
 /**
  * Routes Object
@@ -22,6 +27,11 @@ const routes = {
     watch: "src/img/*",
     src: "src/img/*",
     dest: "build/img"
+  },
+  scss: {
+    watch: "src/scss/**/*.scss",
+    src: "src/scss/style.scss",
+    dest: "build/css"
   }
 };
 
@@ -40,6 +50,13 @@ const taskImg = () =>
     .pipe(image())
     .pipe(gulp.dest(routes.img.dest));
 
+const taskStyle = () =>
+  gulp
+    .src(routes.scss.src)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer({}))
+    .pipe(gulp.dest(routes.scss.dest));
+
 const clean = () => del(["build"]);
 
 // ref. https://www.npmjs.com/package/gulp-webserver
@@ -51,6 +68,7 @@ const watch = () => {
   // Be careful to add image task into watch task!
   // if image size is big, just running task manually wolud be much better!
   gulp.watch(routes.img.watch, taskImg);
+  gulp.watch(routes.scss.watch, taskStyle);
 };
 
 /**
@@ -62,6 +80,6 @@ const prepare = gulp.series([clean, taskImg]);
 
 const jobs = gulp.series([taskPug]);
 
-const postJob = gulp.parallel([webserver, watch]);
+const postJob = gulp.parallel([webserver, watch, taskStyle]);
 
 export const dev = (() => gulp.series([prepare, jobs, postJob]))();
