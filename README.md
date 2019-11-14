@@ -9,7 +9,7 @@ Practice Gulp
 ![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
 ![chat](https://img.shields.io/discord/:serverId.svg)
 
-* This is a tutorial project representing ***how to bundle new application within less than a hundred lines of codes over Gulp + Browserify***.
+* This is a tutorial project representing ***how to bundle web application within less than a hundred lines of codes over Gulp + Browserify***.
 
 * **What does this project include?**  
 Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify | Browserify | Babelify | Uglifyify | Deploy | Output
