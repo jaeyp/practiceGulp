@@ -5,7 +5,8 @@ disqus: hackmd
 
 Practice Gulp
 ===
-<p style="color:#2B6CB0;font-size:20px;font-weight:700">mini static site generator</p>
+### mini static site generator :gift::zap:
+
 
 * This is a tutorial project representing ***how to bundle web application within less than a hundred lines of codes over Gulp + Browserify***.
 
