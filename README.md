@@ -19,12 +19,12 @@ Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify |
 
 ## Table of Contents
 
-* [How to start new gulp project from scratch](#How-to-start-new-gulp-project-from-scratch)  
+* [How to setup new gulp project from scratch](#How-to-setup-new-gulp-project-from-scratch)  
 * [How to run this project](#How-to-run-this-project)  
 * [Directories and Files](#Directories-and-Files)
  
 
-How to start new gulp project from scratch
+How to setup new gulp project from scratch
 ---
 ```bash
 # 1. create project folder
