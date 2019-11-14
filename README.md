@@ -5,7 +5,7 @@ disqus: hackmd
 
 Practice Gulp
 ===
-<span style="color:#2B6CB0;font-size:20px;font-weight:700">mini static site generator</span>
+<p style="color:#2B6CB0;font-size:20px;font-weight:700">mini static site generator</p>
 
 * This is a tutorial project representing ***how to bundle web application within less than a hundred lines of codes over Gulp + Browserify***.
 
