@@ -50,7 +50,7 @@
 13. install gulp-sass
 ~$ npm i node-sass gulp-sass -D
 
-14. install gulp-autoprefixer
+14. install gulp-autoprefixer for browser backward compatibility
 ~$ npm i gulp-autoprefixer -D
 
 9. define 'dev' & 'build' tasks

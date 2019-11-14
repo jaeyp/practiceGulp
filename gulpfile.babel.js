@@ -54,7 +54,7 @@ const taskStyle = () =>
   gulp
     .src(routes.scss.src)
     .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer({}))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(routes.scss.dest));
 
 const clean = () => del(["build"]);
