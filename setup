@@ -42,20 +42,26 @@
     ...
     "dev": "gulp dev",
     "build": "gulp build"
+    "deploy": "gulp deploy"
   },
 
+// 9. pug templates -> html
 9. install gulp-pug
 ~$ npm i gulp-pug -D
 
+// 10. support to clear existing dest (build directory)
 10. install del
 ~$ npm i del -D
 
+// 11. live webserver for testing
 11 install gulp-webserver
 ~$ npm i gulp-webserver -D
 
+// 12. optimize image file
 12. install gulp-image
 ~$ npm i gulp-image -D
 
+// 13-15. SCSS -> minify + CSS + browser backward compatibility
 13. install gulp-sass
 ~$ npm i node-sass gulp-sass -D
 
@@ -69,6 +75,7 @@
 15. install gulp-csso to minify CSS
 ~$ npm i gulp-csso -D
 
+// 16-18. JavaScript ES6+ -> minify + uglify + ES5
 16. install browserify plugin "gulp-bro" in order to allows developers to write Node.js-style modules that compile for use in the browser
 # What is browserify?
 # Simply, it allows us to use require() in the browser!
@@ -77,16 +84,18 @@
 17. install babelify plugin
 ~$ npm i babelify -D
 
-18. installl uglifyify plugin
+18. install uglifyify plugin
 ~$ npm i uglifyify -D
 
-9. define 'dev' & 'build' tasks
-...
+19. install gulp-gh-pages plugin to publish contents to Github pages
+~$ npm i gulp-gh-pages -D
 
-10. run 'dev' task
-~$ npm run dev
-or
-~$ gulp dev
+20. develop and deploy
+- npm run build
+- npm run dev
+http://localhost:8000
+- npm run deploy
+https://jaeyp.github.io/practiceGulp/
 
 --------------------------------------------
 cf. vscode workspace setting (local setting)

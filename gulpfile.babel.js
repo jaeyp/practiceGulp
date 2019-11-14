@@ -10,6 +10,7 @@ import autoprefixer from "gulp-autoprefixer"; // add backward compatibility with
 import csso from "gulp-csso"; // minify CSS
 import bro from "gulp-bro"; // browserify
 import babelify from "babelify";
+import ghPages from "gulp-gh-pages"; // publish contents to Github pages
 
 sass.compiler = require("node-sass");
 
@@ -81,11 +82,13 @@ const taskJs = () =>
     )
     .pipe(gulp.dest(routes.js.dest));
 
-const clean = () => del(["build"]);
+const clean = () => del(["build", ".publish"]);
 
 // ref. https://www.npmjs.com/package/gulp-webserver
 const webserver = () =>
   gulp.src("build").pipe(ws({ livereload: true, open: true }));
+
+const publish = () => gulp.src("build/**/*").pipe(ghPages());
 
 const watch = () => {
   gulp.watch(routes.pug.watch, taskPug);
@@ -105,6 +108,8 @@ const prepare = gulp.series([clean, taskImg]);
 
 const jobs = gulp.series([taskPug, taskStyle, taskJs]);
 
-const postJob = gulp.parallel([webserver, watch]);
+const live = gulp.parallel([webserver, watch]);
 
-export const dev = (() => gulp.series([prepare, jobs, postJob]))();
+export const build = gulp.series([prepare, jobs]);
+export const dev = gulp.series([build, live]);
+export const deploy = gulp.series([build, publish, clean]);
