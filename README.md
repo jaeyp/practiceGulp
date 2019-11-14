@@ -47,7 +47,10 @@ How to start new gulp project from scratch
 # 6. install Gulp
 ~$ npm i gulp-cli -g
 ~$ npm i gulp -D
-~$ npm -p touch nodetouch gulpfile.json
+# create a gulpfile
+~$ npm -p touch nodetouch gulpfile.js
+# or simply,
+~$ touch gulpfile.js
 
 # 7. install Babel packages
 ~$ npm i @babel/register @babel/core -D
