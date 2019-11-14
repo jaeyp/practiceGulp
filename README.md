@@ -9,16 +9,19 @@ Practice Gulp
 ![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
 ![chat](https://img.shields.io/discord/:serverId.svg)
 
-**React with CRA + Others with Gulp + No Webpack = Peace of Mind**
+* This is a tutorial project representing **how to bundle new application within less than a hundred lines of codes over Gulp + Browserify**.
 
-##### Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify | Browserify | Babelify | Uglifyify | Deploy | Output
+* **What does this project include?**  
+Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify | Browserify | Babelify | Uglifyify | Deploy | Output
 
+**React with CRA + Others with Gulp + No Webpack = Peace of Mind**  
 [demo site](https://jaeyp.github.io/practiceGulp/)
 
 ## Table of Contents
 
 * [How to start new gulp project from scratch](#How-to-start-new-gulp-project-from-scratch)  
-* [How to run this project](#How-to-run-this-project)
+* [How to run this project](#How-to-run-this-project)  
+* [Directories and Files](#Directories-and-Files)
  
 
 How to start new gulp project from scratch
@@ -134,6 +137,20 @@ How to run this project
 ~$ cd practiceGulp
 ~$ npm install
 ~$ npm run dev
+# Check gulpfile.babel.js
+```
+
+Directories and Files
+---
+```bash
+.
+├── img/       # image files
+├── js/        # JavaScript files     
+├── scss/      # SCSS files
+├── partials/  # partial pug files
+├── templates/ # pug template files
+├── index.pug
+└── gulpfile.babel.js # task runner
 ```
 
 ### License
