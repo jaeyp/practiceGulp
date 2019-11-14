@@ -52,6 +52,10 @@
 
 14. install gulp-autoprefixer for browser backward compatibility
 ~$ npm i gulp-autoprefixer -D
+14-1. add browserslist in package.json
+  "browserslist": [ <=== be careful! it's a bracket! not curly bracket!
+    "last 2 version"
+  ]
 
 9. define 'dev' & 'build' tasks
 ...
