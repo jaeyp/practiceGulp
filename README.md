@@ -14,7 +14,7 @@ Practice Gulp
 Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify | Browserify | Babelify | Uglifyify | Deploy | Output
 
 * **React with CRA + Others with Gulp + No Webpack = Peace of Mind**
-* Check [demo site](https://jaeyp.github.io/practiceGulp/) and [gulpfile.babel.js](https://github.com/jaeyp/practiceGulp/blob/master/gulpfile.babel.js)
+* Check [demo site](https://jaeyp.github.io/practiceGulp/) and [task runner](https://github.com/jaeyp/practiceGulp/blob/master/gulpfile.babel.js)
 
 ## Table of Contents
 
