@@ -26,18 +26,18 @@ Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify |
 How to setup new Gulp project from scratch
 ---
 ```bash
-# 1. create project folder
+# 0. create project folder
 ~$ mkdir project_name
 ~$ cd project_name
 
-# 2. initialize git
+# 1. initialize git
 ~$ git init
 
-# 3. scaffold directories & files
+# 2. scaffold directories & files
 
-# 4. create new repository on github
+# 3. create new repository on github
 
-# 5. add the repository on project
+# 4. add the repository on project
 # set remote repository
 ~$ git remote add origin <repository-url>
 # pull repository regardless of history
@@ -45,6 +45,11 @@ How to setup new Gulp project from scratch
 # initial commit
 ~$ git commit -am "initial commit"
 ~$ git push origin master
+
+# 5. initialize npm project
+~$ npm init # or jarn init
+# 5-1 remove "main" fields from package.json since this is not a module 
+#     but a standalone program.
 
 # 6. install Gulp
 ~$ npm i gulp-cli -g
@@ -56,7 +61,7 @@ How to setup new Gulp project from scratch
 
 # 7. install Babel packages
 ~$ npm i @babel/register @babel/core -D
-# 7-1. install preset-env in order to use preset instead of adding lots of babel plugins in .babelrc
+# 7-1. install preset-env in order to use preset instead of plugins in .babelrc
 ~$ npm i @babel/preset-env -D
 # 7-2. create and edit .babelrc
   { 
@@ -69,7 +74,8 @@ How to setup new Gulp project from scratch
     #    @babel/preset-typescript
 
     "presets": ["@babel/preset-env"]
-    # with this setting, all the plugins to enable transforms for ES2015+ are installed at once.
+    # with this setting, 
+    # all the plugins to enable transforms for ES2015+ are installed at once.
   }
 
 # 8. edit package.json
@@ -120,7 +126,7 @@ How to setup new Gulp project from scratch
 # 19. install gulp-gh-pages plugin to publish contents to Github pages
 ~$ npm i gulp-gh-pages -D
 
-# 20. just develop anything and deploy it
+# 20. just write codes and deploy it
 # build source codes
 - npm run build
 # run live server at http://localhost:8000
