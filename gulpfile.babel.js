@@ -15,7 +15,7 @@ import ghPages from "gulp-gh-pages"; // publish contents to Github pages
 sass.compiler = require("node-sass");
 
 /**
- * Routes Object
+ * Routing Object
  */
 const routes = {
   pug: {
@@ -82,13 +82,16 @@ const taskJs = () =>
     )
     .pipe(gulp.dest(routes.js.dest));
 
+/**
+ * Utility Methods
+ */
 const clean = () => del(["build", ".publish"]);
 
-// ref. https://www.npmjs.com/package/gulp-webserver
-const webserver = () =>
-  gulp.src("build").pipe(ws({ livereload: true, open: true }));
-
 const publish = () => gulp.src("build/**/*").pipe(ghPages());
+
+// https://www.npmjs.com/package/gulp-webserver
+const runServer = () =>
+  gulp.src("build").pipe(ws({ livereload: true, open: true }));
 
 const watch = () => {
   gulp.watch(routes.pug.watch, taskPug);
@@ -108,7 +111,7 @@ const prepare = gulp.series([clean, taskImg]);
 
 const jobs = gulp.series([taskPug, taskStyle, taskJs]);
 
-const live = gulp.parallel([webserver, watch]);
+const live = gulp.parallel([runServer, watch]);
 
 export const build = gulp.series([prepare, jobs]);
 export const dev = gulp.series([build, live]);
