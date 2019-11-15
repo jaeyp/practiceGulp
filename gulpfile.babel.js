@@ -3,7 +3,7 @@
 import gulp from "gulp";
 import pug from "gulp-pug"; // compile pug templates into HTML or JS
 import del from "del"; // delete files and directories using globs (globby - glob pattern matching plugin)
-import ws from "gulp-webserver"; // streaming gulp plugin to run a local webserver with LiveReload
+import ws from "gulp-webserver"; // run a local webserver with LiveReloading
 import image from "gulp-image"; // Optimize PNG, JPEG, GIF, SVG images with gulp task.
 import sass from "gulp-sass";
 import autoprefixer from "gulp-autoprefixer"; // add backward compatibility with css for old browser
@@ -49,7 +49,7 @@ const routes = {
  */
 const taskPug = () =>
   gulp
-    .src(routes.pug.src) // read a stream from the routing source
+    .src(routes.pug.src) // read a meta stream from the routing source
     .pipe(pug()) // pass the stream and pug it
     .pipe(gulp.dest(routes.pug.dest)); // write the stream pugged to the routing destination
 
@@ -93,7 +93,7 @@ const publish = () => gulp.src("build/**/*").pipe(ghPages());
 const watch = () => {
   gulp.watch(routes.pug.watch, taskPug);
   // Be careful to add image task into watch task!
-  // if image size is big, just running task manually wolud be much better!
+  // if image size was too big, just running task manually wolud be much better!
   gulp.watch(routes.img.watch, taskImg);
   gulp.watch(routes.scss.watch, taskStyle);
   gulp.watch(routes.js.watch, taskJs);
@@ -103,7 +103,7 @@ const watch = () => {
  * Series/Parallel Methods
  */
 // img task could take long time in case of big size,
-// therefore, we run img task in preparation stage so that we can be sure that all images get ready for other tasks!
+// therefore, we run the img task in preparation stage so that we can be sure that all images get ready for other tasks!
 const prepare = gulp.series([clean, taskImg]);
 
 const jobs = gulp.series([taskPug, taskStyle, taskJs]);
