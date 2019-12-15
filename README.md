@@ -80,7 +80,7 @@ How to setup new Gulp project from scratch
 # 7-3 We then need to instruct gulp to use Babel.
 # To do this, we need to rename the gulpfile.js to gulpfile.babel.js:
 ~$ mv "gulpfile.js" "gulpfile.babel.js"
-# We can now use ES6 via Babel!
+# We can now use ES6 with gulp via Babel!
 
 # 8. edit package.json
   "scripts": {
