@@ -78,8 +78,9 @@ How to setup new Gulp project from scratch
     # all the plugins to enable transforms for ES2015+ are installed at once.
   }
 # 7-3 We then need to instruct gulp to use Babel.
-To do this, we need to rename the gulpfile.js to gulpfile.babel.js:
+# To do this, we need to rename the gulpfile.js to gulpfile.babel.js:
 ~$ mv "gulpfile.js" "gulpfile.babel.js"
+# We can now use ES6 via Babel!
 
 # 8. edit package.json
   "scripts": {
