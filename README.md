@@ -14,7 +14,7 @@ Static Site Generator
 Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify | Browserify | Babelify | Uglifyify | Deploy | Output
 
 * **React with CRA + Others with Gulp + No Webpack = Peace of Mind**
-* Check [demo site](https://jaeyp.github.io/practiceGulp/) and [task runner](https://github.com/jaeyp/practiceGulp/blob/master/gulpfile.babel.js)
+* Check [demo site](https://jaeyp.github.io/static-site-generator/) and [task runner](https://github.com/jaeyp/static-site-generator/blob/master/gulpfile.babel.js)
 
 ## Table of Contents
 
@@ -138,8 +138,8 @@ How to setup new Gulp project from scratch
 How to run this project
 ---
 ```bash
-~$ git clone https://github.com/jaeyp/practiceGulp
-~$ cd practiceGulp
+~$ git clone https://github.com/jaeyp/static-site-generator
+~$ cd static-site-generator
 ~$ npm install
 ~$ npm run dev
 # Check gulpfile.babel.js
