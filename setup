@@ -6,7 +6,7 @@
 3. creating a new repository on github
 
 4. adding the repository on project
-~$ git remote add origin https://github.com/jaeyp/practiceGulp
+~$ git remote add origin https://github.com/jaeyp/static-site-generator
 ~$ git pull origin master --allow-unrelated-histories
 ~$ git push origin master
 
@@ -95,7 +95,7 @@
 - npm run dev
 http://localhost:8000
 - npm run deploy
-https://jaeyp.github.io/practiceGulp/
+https://jaeyp.github.io/static-site-generator/
 
 --------------------------------------------
 cf. vscode workspace setting (local setting)
@@ -103,3 +103,14 @@ Command Palette(Ctrl+Shift+P or f1) > Open User Settings > Workbench > Appearanc
 
 cf. vscode user setting (global setting)
 Command Palette(Ctrl+Shift+P or f1) > Open Settings (JSON)
+
+--------------------------------------------
+Publish Error while running 'npm run deploy'
+[14:18:43] 'publish' errored after 658 ms
+[14:18:43] TypeError: Cannot read property '0' of null
+
+Solution:
+$ cd node_modules/gulp-gh-pages/
+$ npm install --save gift@0.10.2
+$ cd ../../
+$ npm run deploy  # gulp deploy

@@ -1,5 +1,5 @@
 {
-  "name": "practicegulp",
+  "name": "static-site-generator",
   "version": "1.0.0",
   "description": "Learn Gulp by building an development environment",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaeyp/practiceGulp.git"
+    "url": "git+https://github.com/jaeyp/static-site-generator.git"
   },
   "author": "jaey park <jp.inseoul@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaeyp/practiceGulp/issues"
+    "url": "https://github.com/jaeyp/static-site-generator/issues"
   },
-  "homepage": "https://github.com/jaeyp/practiceGulp#readme",
+  "homepage": "https://github.com/jaeyp/static-site-generator#readme",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
