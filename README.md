@@ -158,6 +158,23 @@ Directories and Files
 └── gulpfile.babel.js # task runner
 ```
 
+### Errors
+* publish error
+```bash
+# Error
+$ npm run deploy
+...
+[14:18:43] 'publish' errored after 658 ms
+[14:18:43] TypeError: Cannot read property '0' of null
+...
+
+# Solution
+$ cd node_modules/gulp-gh-pages/
+$ npm install --save gift@0.10.2
+$ cd ../../
+$ npm run deploy  # gulp deploy
+```
+
 ### License
 
 MIT © [Jaehyun Park](https://portfolio.jaeyp.xyz).
