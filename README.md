@@ -21,6 +21,7 @@ Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify |
 * [How to setup new Gulp project from scratch](#How-to-setup-new-Gulp-project-from-scratch)  
 * [How to run this project](#How-to-run-this-project)  
 * [Directories and Files](#Directories-and-Files)
+* [Trouble Shooting](#Trouble-Shooting)
  
 
 How to setup new Gulp project from scratch
@@ -158,7 +159,8 @@ Directories and Files
 └── gulpfile.babel.js # task runner
 ```
 
-### Errors
+Trouble Shooting
+---
 * publish error
 ```bash
 # Error
