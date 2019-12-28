@@ -3,9 +3,9 @@ title: 'Static Site Generator (Gulp)'
 disqus: hackmd
 ---
 
-Static Site Generator with Gulp
+Static Site Generator
 ===
-### mini static site generator :gift::zap:
+### mini static site generator with Gulp :gift::zap:
 
 
 * This is a tutorial project representing ***how to bundle web application within less than a hundred lines of codes over Gulp + Browserify***.
