@@ -12,11 +12,6 @@ Source | Pug to HTML | SCSS to CSS | Optimize Images | JS ES6+ to ES5 | Minify |
 * **React with CRA + Others with Gulp + No Webpack = Peace of Mind**
 * Check [demo site](https://jaeyp.github.io/static-site-generator/) and [task runner](https://github.com/jaeyp/static-site-generator/blob/master/gulpfile.babel.js)
 
-## Table of Contents
-
-* [How to run this project](#How-to-run-this-project)  
-* [Directories and Files](#Directories-and-Files)
-
 How to run this project
 ---
 ```bash
