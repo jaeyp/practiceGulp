@@ -1,7 +1,3 @@
----
-title: 'Static Site Generator (Gulp)'
-disqus: hackmd
----
 
 Static Site Generator
 ===
